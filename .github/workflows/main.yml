@@ -1,0 +1,24 @@
+#name of workflow
+name : First Workflow
+#trigger of the workflow
+on : 
+  #any code push to the repo trigger this workflow
+  push :
+    branches: 
+      - main
+#jobs sections to be performed
+jobs :
+  #name of the first job (can't contain spaces)
+  first_job :
+    #runner of the first job
+    runs-on : ubuntu-latest
+    #steps of the job it can ba an action or a shell command (be careful steps is an array)
+    steps:
+              # name of the first element of the array  
+              - name:  print a welcome message
+              # we use run when it is a shell command
+                run : echo "welcome to your repo"
+
+
+                
+    
