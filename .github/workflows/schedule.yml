@@ -2,7 +2,7 @@ name: "Periodic Task Workflow"
 
 on:
   schedule:
-    - cron: "38 * * * *"  # runs at the 35th minute of every hour
+    - cron: "0 * * * *"  # runs at the 35th minute of every hour
 
 jobs:
   periodic-task:
