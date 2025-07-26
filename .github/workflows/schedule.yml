@@ -1,12 +1,12 @@
-on :
-  schedule:
-    - cron: "35 * * * *"
+name: "Periodic Task Workflow"
 
-jobs :
+on:
+  schedule:
+    - cron: "38 * * * *"  # runs at the 35th minute of every hour
+
+jobs:
   periodic-task:
-    runs-on : ubuntu_latest
-    steps :
-            - name : "printing periodic task"
-              run : echo "periodic task"
-    
-    
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Printing periodic task"
+        run: echo "periodic task"
