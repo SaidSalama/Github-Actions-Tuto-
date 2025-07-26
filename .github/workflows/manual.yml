@@ -1,0 +1,10 @@
+name : "manual trigger"
+on :
+  workflow_dispatch :
+
+jobs :
+    printing-manually:
+      runs-on : ubuntu-latest
+      steps:
+          - name: "printing manually" 
+            run : echo "printing task manually"
