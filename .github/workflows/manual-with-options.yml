@@ -7,11 +7,16 @@ on:
           description: "Option to choose"
           required: true
           default: "deploy"
+          options:
+              - deploy
+              - test
+              - delete
+              
 
 jobs:
     deploy:
       runs-on: ubuntu-latest
       steps:
         - name: Print input values
-          run: echo "Workflow runs with option ${{ github.event.inputs.environment }}"
+          run: echo "Workflow runs with option ${{ inputs.environment }}"
 
