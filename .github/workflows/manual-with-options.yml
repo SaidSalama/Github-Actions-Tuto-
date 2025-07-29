@@ -1,16 +1,17 @@
-name : manual workflow with options
+name: Manual Workflow with Options
+
 on:
   workflow_dispatch:
     inputs:
-      enviorenment:
-        description: "options to chhose"
+      environment:
+        description: "Option to choose"
         required: true
         default: "deploy"
-    
-  jobs:
+
+jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Print input values
-        run: echo "workflow runs with options ${{inputs.environment}}"
-      
+        run: echo "Workflow runs with option: ${{ inputs.environment }}"
+
