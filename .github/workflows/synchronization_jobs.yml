@@ -1,0 +1,15 @@
+name: synchronization_jobs
+on: 
+    workflow_dispatch
+jobs:
+    job_1
+      runs-on: ubuntu-latest
+      steps:
+        -run : echo "job1"
+
+    job_2
+    runs-on: ubuntu-latest
+    needs: job_1
+    steps:
+      -run : echo "job2"
+    
