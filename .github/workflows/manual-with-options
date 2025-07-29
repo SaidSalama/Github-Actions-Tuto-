@@ -1,0 +1,16 @@
+name : manual workflow with options
+on:
+  workflow_dispatch:
+    inputs:
+      enviorenment:
+        description: "options to chhose"
+        required: true
+        default: "deploy"
+    
+  jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print input values
+        run: echo "workflow runs with options ${{inputs.environment}}"
+      
