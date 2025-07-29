@@ -1,0 +1,8 @@
+name : warning
+on : workflow_dispatch
+jobs:
+  output_warning :
+    runs-on: ubuntu-latest
+    steps:
+      - name: "printing warning message"
+        run : echo "::warning::a bad function was found"
