@@ -1,7 +1,7 @@
 name: Conditional Steps on Manual Trigger
 
 on:
-  push:
+  #push:
   workflow_dispatch:
 
 jobs:
