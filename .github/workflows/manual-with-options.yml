@@ -13,5 +13,5 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: Print input values
-          run: echo "Workflow runs with option: ${{ github.event.inputs.environment }}"
+          run: echo "Workflow runs with option ${{ github.event.inputs.environment }}"
 
