@@ -7,6 +7,7 @@ on:
           description: "Option to choose"
           required: true
           default: "deploy"
+          type: choice # to choose when triggering if not specified we will have to write the options ourself
           options:
               - deploy
               - test
