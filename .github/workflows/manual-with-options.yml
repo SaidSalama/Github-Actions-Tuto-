@@ -1,17 +1,17 @@
 name: Manual Workflow with Options
 
 on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: "Option to choose"
-        required: true
-        default: "deploy"
+    workflow_dispatch:
+      inputs:
+        environment:
+          description: "Option to choose"
+          required: true
+          default: "deploy"
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print input values
-        run: echo "Workflow runs with option: ${{ inputs.environment }}"
+    deploy:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Print input values
+          run: echo "Workflow runs with option: ${{ github.event.inputs.environment }}"
 
